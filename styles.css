@@ -1,0 +1,176 @@
+/* FONTS 
+font-family: 'Inter', sans-serif;
+font-family: 'Lexend Deca', sans-serif;
+*/
+
+/*General*/
+
+:root {
+    --main-background-color: hsl(233, 47%, 7%);
+    --card-background-color: hsl(244, 38%, 16%);
+    --image-background-color: rgb(166, 74, 223);
+
+    --main-heading: hsl(0, 0%, 100%);
+    --main-paragraph: hsla(0, 0%, 100%, 0.75);
+    --stats-paragraph: hsla(0, 0%, 100%, 0.6);
+    --font-inter: 'Inter', sans-serif;
+    --font-lexend: 'Lexend Deca', sans-serif;
+
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    max-width: 1440px;
+    background-color: var(--main-background-color);
+    min-height: 100vh;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/*Typography*/
+
+.main-heading,
+.main-paragraph,
+.stats-headings {
+    font-family: var(--font-inter);
+}
+
+.main-heading {
+    font-size: 2rem;
+}
+
+.stats-headings {
+    font-size: 1.6rem;
+}
+
+.main-paragraph {
+    color: var(--main-paragraph);
+}
+
+.main-heading,
+.stats-headings {
+    color: var(--main-heading);
+}
+
+.stats-paragraph {
+    color: var(--stats-paragraph);
+}
+
+.main-paragraph {
+    font-size: 1.1rem;
+}
+
+.stats-paragraph {
+    font-family: var(--font-lexend);
+    font-size: 0.9rem;
+}
+
+/*Layout*/
+
+.card {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 90%;
+    background: var(--card-background-color);
+
+    margin: 2.5em auto;
+    border-radius: 10px;
+}
+
+img {
+    min-width: 100%;
+    height: 280px;
+    filter: opacity(0.3) drop-shadow(0 0 var(--image-background-color));
+    border-radius: 10px 10px 0 0;
+    margin-bottom: 1.5em;
+}
+
+.main {
+    width: 70%;
+    text-align: center;
+}
+
+.main-heading>span {
+    color: var(--image-background-color);
+}
+
+.main-paragraph {
+    margin-bottom: 2.5em;
+}
+
+.stats-headings,
+.stats-paragraph {
+    margin: 0;
+}
+
+.stats-headings {
+    margin-bottom: 0.3em;
+}
+
+.stats-paragraph {
+    margin-bottom: 2.5em;
+}
+
+@media (min-width: 900px) {
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin: 0;
+
+        height: 480px;
+    }
+
+    .main {
+        width: 38%;
+        margin-left: 2.5em;
+        text-align: left;
+    }
+
+    .main-heading {
+        margin-top: 1.6em;
+        margin-bottom: 1.2em;
+    }
+
+    .main-paragraph {
+        line-height: 30px;
+        margin-bottom: 5.5em;
+
+        font-size: 1rem;
+    }
+
+    .stats {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .stats-paragraph {
+        font-size: 0.7rem;
+    }
+
+
+    img {
+
+        min-width: 50%;
+        border-radius: 0 10px 10px 0;
+        width: 40%;
+        height: 480px;
+    }
+
+
+
+}
